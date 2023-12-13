@@ -1,0 +1,47 @@
+.time-line {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  a {
+    color: $primary;
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    cursor: pointer;
+    transition: padding-left 0.4s;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      padding-left: 110px;
+
+      &::before {
+        width: 100px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 30px;
+      height: 1px;
+      transform: translateY(-50%);
+      transition: width 0.4s;
+      background-color: #164863;
+    }
+  }
+}
+
+.dark {
+  .time-line {
+    a {
+      color: #ffffff;
+      &::before {
+        background: #ffffff;
+      }
+    }
+  }
+}

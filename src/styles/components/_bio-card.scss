@@ -1,0 +1,15 @@
+.bio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: bolder;
+  }
+
+  p {
+    font-weight: bold;
+  }
+}

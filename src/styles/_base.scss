@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+
+  color: $primary;
+  transition-duration: 300ms;
+
+  #root {
+    height: 100%;
+
+    ul {
+      margin: 0;
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.dark {
+  body {
+    color: #ffffff;
+    background-color: $primary;
+  }
+}

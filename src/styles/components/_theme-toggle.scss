@@ -1,0 +1,106 @@
+.lamp {
+  position: absolute;
+  top: 0;
+  right: 8%;
+  margin: auto 0;
+  width: 0.65rem;
+  height: 10rem;
+  background-image: linear-gradient(#000000b3, #000000b3),
+    linear-gradient(#000000b3, #000000b3), linear-gradient(#000000b3, #000000b3);
+  background-repeat: no-repeat;
+  background-size: 0.14rem 8rem, 0.4rem 0.8rem, 0.7rem 2rem;
+  background-position: 50% 0, 0.14rem 8rem, 0 8.8rem;
+  transition: top 0.5s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    left: -1.65rem;
+    bottom: -4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: all 0.75s;
+    background-color: #ffc436;
+    box-shadow: 0px 0px 60px 12px #ffc436;
+  }
+
+  .switch {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    top: 11rem;
+    z-index: 2;
+    appearance: none;
+  }
+
+  .light {
+    top: 10.05rem;
+    left: 0.2rem;
+    width: 0;
+    height: 1.5rem;
+    border-right: 0.2rem solid gold;
+    position: absolute;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      left: -0.5rem;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      border: 0.2rem solid gold;
+      box-shadow: 0px 0px 50px gold;
+    }
+  }
+
+  input {
+    right: -10px;
+
+    &:checked ~ .lamp::before {
+      background: #ffffffff;
+      box-shadow: 0px 2px 10px #ffffffcc, 0px 5px 50px #ffffffcc,
+        0px 8px 80px #ffffff99, 0px 8px 120px #ffffff99;
+    }
+  }
+
+  &.on {
+    animation: bounce 1s ease-in-out;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-25%);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+}
+
+.dark {
+  .lamp {
+    top: -5rem;
+
+    &:before {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 60px 12px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .light {
+    border-right: 0.2rem solid #ffffff08;
+
+    &:before {
+      border: 0.2rem solid #ffffff08;
+      box-shadow: 0px 0px 50px #ffffff08;
+    }
+  }
+}
