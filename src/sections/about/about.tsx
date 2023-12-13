@@ -1,9 +1,9 @@
 const AboutSection = () => {
-  const getExperienceYears = () => {
-    const currentYear = new Date().getFullYear();
-    const startYear = 2021;
-    return currentYear - startYear;
-  };
+  // const getExperienceYears = () => {
+  //   const currentYear = new Date().getFullYear();
+  //   const startYear = 2021;
+  //   return currentYear - startYear;
+  // };
 
   return (
     <section id="About" className="w-full h-screen">
