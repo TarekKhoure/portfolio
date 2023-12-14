@@ -24,6 +24,11 @@
       transform: scale(110%);
     }
   }
+  @media screen and (max-width: 600px) {
+    img {
+      width: 60%;
+    }
+  }
 }
 
 .dark {
