@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  gap: 1rem;
+  border: 1px solid #fff;
+  padding: 2rem;
+  background: #fff;
+  color: $primary;
+  filter: drop-shadow(0px 0px 2px #ffc436);
+
+  .input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  input,
+  textarea {
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #cccccc;
+    background: $primary;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .error {
+    color: red;
+  }
+}
+
+.dark {
+  form {
+    filter: drop-shadow(0px 0px 2px #000000);
+  }
+}

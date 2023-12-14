@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
 import { throttle } from "lodash";
+import Sidebar from "./components/Sidebar";
+import Content from "./components/Content";
+import { useEffect, useRef, useState } from "react";
 import MenuIcon from "../public/assets/svgs/menu-icon";
 
 function App() {
