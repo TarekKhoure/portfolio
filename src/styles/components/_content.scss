@@ -6,4 +6,14 @@
   overflow-y: auto;
   position: relative;
   scroll-behavior: smooth;
+
+  .lamp {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .lamp {
+      display: block;
+    }
+  }
 }

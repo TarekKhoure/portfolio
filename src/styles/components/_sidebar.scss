@@ -6,4 +6,35 @@ aside {
   padding: 4rem;
   position: relative;
   gap: 2rem;
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    height: 100%;
+    padding: 0 2rem;
+    justify-content: center;
+    gap: 4rem;
+    z-index: 100;
+    background-color: #ffffff;
+    filter: drop-shadow(0px 2px 5px #000);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+
+    .lamp {
+      display: none;
+    }
+  }
+}
+
+.dark {
+  @media screen and (max-width: 800px) {
+    aside {
+      background-color: $primary;
+    }
+  }
+}
+
+.shown {
+  aside {
+    transform: translateX(0);
+  }
 }

@@ -1,4 +1,41 @@
 .app {
   display: flex;
   height: 100%;
+  position: relative;
+
+  #menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: transform 0.3s ease-in-out;
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+
+    g {
+      fill: $primary;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    #menu-icon {
+      display: block;
+    }
+  }
+
+  &.shown {
+    #menu-icon {
+      transform: translateX(320px);
+    }
+  }
+}
+
+.dark {
+  .app {
+    #menu-icon {
+      g {
+        fill: #ffffff;
+      }
+    }
+  }
 }
