@@ -6,7 +6,7 @@ import ThemeToggle from "../ThemeToggle";
 
 interface SidebarProps {}
 
-const Sidebar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
+const Sidebar = forwardRef<HTMLDivElement, SidebarProps>((_, ref) => {
   return (
     <aside ref={ref}>
       <ThemeToggle />
