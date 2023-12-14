@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import { useEffect, useRef, useState } from "react";
 import MenuIcon from "../public/assets/svgs/menu-icon";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const [sideBarShown, setSideBarShown] = useState<boolean>(false);
@@ -36,6 +37,7 @@ function App() {
       <MenuIcon onClick={() => setSideBarShown(true)} />
       <Sidebar ref={sidebarRef} />
       <Content />
+      <SpeedInsights />
     </div>
   );
 }
