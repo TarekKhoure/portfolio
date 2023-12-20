@@ -7,9 +7,9 @@ const TimeLine = () => {
       <li>
         <a href="#Experience">Experience</a>
       </li>
-      <li>
+      {/* <li>
         <a href="#Contact">Contact Me</a>
-      </li>
+      </li> */}
     </ul>
   );
 };

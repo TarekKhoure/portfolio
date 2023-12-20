@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
+.btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  color: #fff;
+  background-color: $primary;
+  width: fit-content;
+  padding: 10px 50px 10px 30px;
+  border: none;
+  border-radius: 50px;
+  transition: 487ms;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  gap: 5px;
+
+  svg {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-200px);
+    fill: $primary;
+  }
+
+  &:hover {
+    transition: 0.3s ease-in-out;
+    padding: 10px 50px;
+    background-color: #fff;
+    color: $primary;
+    border: solid 1px $primary;
+
+    svg {
+      transform: translateX(0px);
+    }
+  }
+}
+
+.dark {
+  .btn {
+    background-color: #ffffff;
+    color: $primary;
+
+    svg {
+      fill: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: #ffffff;
+      border: solid 1px #ffffff;
+
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
+}

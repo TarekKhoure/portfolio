@@ -1,15 +1,13 @@
-import AboutSection from "../../sections/about";
-import ContactSection from "../../sections/contact";
-import ExperienceSection from "../../sections/experience";
 import ThemeToggle from "../ThemeToggle";
+import AboutSection from "../../sections/about";
+// import ExperienceSection from "../../sections/experience";
 
 const Content = () => {
   return (
     <div className="content">
       <ThemeToggle />
       <AboutSection />
-      <ExperienceSection />
-      <ContactSection />
+      {/* <ExperienceSection /> */}
     </div>
   );
 };

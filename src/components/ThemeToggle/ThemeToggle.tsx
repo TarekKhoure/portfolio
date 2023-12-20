@@ -3,7 +3,7 @@ import { SetStateAction, useEffect, useState } from "react";
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("dark");
 
-  const audio = new Audio("/assets/light-switch.mp3");
+  const audio = new Audio("/assets/audio/light-switch.mp3");
 
   useEffect(() => {
     if (theme === "dark") {

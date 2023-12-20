@@ -1,58 +1,119 @@
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 3rem;
-  gap: 1rem;
-  border: 1px solid #fff;
-  padding: 2rem;
-  background: #fff;
-  color: $primary;
-  filter: drop-shadow(0px 0px 2px #ffc436);
+.MuiPaper-root {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0) !important;
 
-  .input-row {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+  .content-container {
+    width: 60%;
+    height: fit-content;
+    background: white;
+    align-self: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 15px;
+    padding: 40px 0;
+    padding: 40px;
 
-  input,
-  textarea {
-    height: 30px;
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    font-size: 16px;
-
-    &:focus {
-      outline: none;
+    @media screen and (max-width: 800px) {
+      width: 80%;
     }
-  }
 
-  textarea {
-    height: 100px;
-    resize: vertical;
-  }
+    @media screen and (max-width: 500px) {
+      width: 90%;
+    }
 
-  button {
-    width: 100px;
-    height: 50px;
-    border: 1px solid #cccccc;
-    background: $primary;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    #close-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: $primary;
+    }
 
-  .error {
-    color: red;
-  }
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 1rem;
+      overflow-y: hidden;
+      padding: 20px 0;
 
-.dark {
-  form {
-    filter: drop-shadow(0px 0px 2px #000000);
+      .input-row {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        visibility: hidden;
+      }
+
+      .error-visible {
+        visibility: visible;
+      }
+
+      textarea,
+      input {
+        line-height: 1.5rem;
+        border: 0;
+        outline: none;
+        font-family: inherit;
+        appearance: none;
+        color: $primary;
+        background-color: #ffffff;
+        height: 8rem;
+        resize: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+      }
+
+      input {
+        height: unset;
+        width: 250px;
+        align-self: flex-end;
+      }
+
+      button {
+        background: $primary;
+        color: #ffffff;
+        padding: 10px 20px;
+        filter: drop-shadow(0 2px 3px #000);
+
+        svg {
+          transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .MuiDialogContent-root {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+
+      .MuiDialogTitle-root {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        font-size: 30px !important;
+        font-weight: bolder;
+        color: $primary;
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
   }
 }
