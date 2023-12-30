@@ -1,5 +1,5 @@
 const AboutSection = () => (
-  <section id="About" className="w-full h-screen">
+  <section id="about" className="w-full h-screen">
     <img alt="Tarek Khoury" src="/assets/images/me.jpeg" loading="lazy" />
     <p>
       <b>I'm Tarek Khoury</b>, and my journey in the world of web development

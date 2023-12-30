@@ -19,6 +19,15 @@ body {
       }
     }
   }
+
+  section {
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 .dark {

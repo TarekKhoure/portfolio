@@ -1,11 +1,5 @@
-#About {
-  padding: 0 6rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  height: 100%;
+#about {
+  padding-bottom: 0;
 
   P {
     text-align: justify;
@@ -33,7 +27,7 @@
 }
 
 .dark {
-  #About {
+  #about {
     p {
       color: #cccccc;
       b {

@@ -20,6 +20,28 @@
       fill: #ffffff;
     }
   }
+
+  a:first-child {
+    animation: slidein 1s ease-in-out;
+  }
+
+  a:nth-child(2) {
+    animation: slidein 0.7s ease-in-out;
+  }
+
+  a:last-child {
+    animation: slidein 0.5s ease-in-out;
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateX(-200px);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
 }
 
 .dark {
