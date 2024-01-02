@@ -1,0 +1,5 @@
+#experience {
+  ul:hover .experience-card:not(:hover) {
+    opacity: 0.5;
+  }
+}

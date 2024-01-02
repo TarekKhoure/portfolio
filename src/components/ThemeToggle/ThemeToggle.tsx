@@ -1,7 +1,7 @@
 import { SetStateAction, useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const audio = new Audio("/assets/audio/light-switch.mp3");
 

@@ -18,8 +18,6 @@ function App() {
         !sidebarRef.current.contains(event.target)
       ) {
         setSideBarShown(false);
-      } else {
-        setSideBarShown(true);
       }
     };
 
@@ -34,7 +32,7 @@ function App() {
 
   return (
     <div className={`app ${sideBarShown ? "shown" : ""}`}>
-      <MenuIcon onClick={() => setSideBarShown(true)} />
+      <MenuIcon onClick={() => setSideBarShown(!sideBarShown)} />
       <Sidebar ref={sidebarRef} />
       <Content />
       <SpeedInsights />

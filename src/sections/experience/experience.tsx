@@ -124,9 +124,13 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience">
-      {experinces.map((experience) => (
-        <ExperienceCard experience={experience} key={experience.id} />
-      ))}
+      <ul>
+        {experinces.map((experience) => (
+          <li key={experience.id}>
+            <ExperienceCard experience={experience} />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

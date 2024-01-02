@@ -1,13 +1,15 @@
 .experience-card {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
   gap: 20px;
   border-radius: 8px;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
 
   &:hover {
     background-color: rgba(22, 72, 99, 0.1);
+    transform: translate(10px, -10px);
 
     time {
       color: #11235a;
@@ -17,21 +19,27 @@
       .position {
         color: #11235a;
       }
+
+      .stack {
+        span {
+          filter: drop-shadow(0 2px 5px $primary);
+        }
+      }
     }
   }
 
   time {
     font-size: 12px;
-    font-weight: bold;
+    font-weight: bolder;
     min-width: fit-content;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
   .project {
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 
     .position {
       font-size: 18px;
@@ -67,6 +75,7 @@
         background: $primary;
         border-radius: 15px;
         color: #ffffff;
+        transition: filter 0.2s ease-in-out;
       }
     }
   }
@@ -89,12 +98,18 @@
       background-color: rgba(246, 236, 169, 0.1);
 
       time {
-        color: #f6eca9;
+        color: #ffffff;
       }
 
       .project {
         .position {
-          color: #f6eca9;
+          color: #ffffff;
+        }
+
+        .stack {
+          span {
+            filter: drop-shadow(0 2px 5px #fff);
+          }
         }
       }
     }
