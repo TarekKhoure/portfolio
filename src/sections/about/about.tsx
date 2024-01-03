@@ -1,5 +1,9 @@
-const AboutSection = () => (
-  <section id="about" className="w-full h-screen">
+import { forwardRef } from "react";
+
+interface AboutSectionProps {}
+
+const AboutSection = forwardRef<HTMLDivElement, AboutSectionProps>((_, ref) => (
+  <section id="about" className="w-full h-screen" ref={ref}>
     <img alt="Tarek Khoury" src="/assets/images/me.jpeg" loading="lazy" />
     <p>
       <b>I'm Tarek Khoury</b>, and my journey in the world of web development
@@ -12,6 +16,6 @@ const AboutSection = () => (
       in university.
     </p>
   </section>
-);
+));
 
 export default AboutSection;

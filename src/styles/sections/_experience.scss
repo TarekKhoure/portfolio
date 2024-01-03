@@ -2,4 +2,19 @@
   ul:hover .experience-card:not(:hover) {
     opacity: 0.5;
   }
+
+  ul {
+    li {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem;
+
+    .experience-card {
+      width: 90%;
+    }
+  }
 }

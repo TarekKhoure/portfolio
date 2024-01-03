@@ -45,3 +45,23 @@
     }
   }
 }
+
+.about-visible {
+  a[href="#about"] {
+    padding-left: 110px;
+
+    &::before {
+      width: 100px;
+    }
+  }
+}
+
+.experience-visible {
+  a[href="#experience"] {
+    padding-left: 110px;
+
+    &::before {
+      width: 100px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 #about {
-  padding-bottom: 0;
+  padding: 0 6rem;
+  min-height: 100vh;
+  justify-content: space-evenly;
 
   P {
     text-align: justify;
@@ -24,6 +26,10 @@
     img {
       width: 180px;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 2rem;
   }
 }
 
