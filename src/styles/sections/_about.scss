@@ -22,14 +22,12 @@
       transform: scale(110%);
     }
   }
-  @media screen and (max-width: 600px) {
-    img {
-      width: 180px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
+  @media screen and ((max-width: 600px) or (max-height: 600px)) {
     padding: 0 2rem;
+
+    img {
+      width: 250px;
+    }
   }
 }
 

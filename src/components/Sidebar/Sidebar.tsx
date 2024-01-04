@@ -5,18 +5,22 @@ import { forwardRef } from "react";
 import ThemeToggle from "../ThemeToggle";
 import ContactForm from "./ContactForm/ContactForm";
 
-interface SidebarProps {}
+interface SidebarProps {
+  setSideBarShow: (sideBarshown: boolean) => void;
+}
 
-const Sidebar = forwardRef<HTMLDivElement, SidebarProps>((_, ref) => {
-  return (
-    <aside ref={ref}>
-      <ThemeToggle />
-      <BioCard />
-      <TimeLine />
-      <Social />
-      <ContactForm />
-    </aside>
-  );
-});
+const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
+  ({ setSideBarShow }, ref) => {
+    return (
+      <aside ref={ref}>
+        <ThemeToggle />
+        <BioCard />
+        <TimeLine setSideBarShow={setSideBarShow} />
+        <Social />
+        <ContactForm />
+      </aside>
+    );
+  }
+);
 
 export default Sidebar;

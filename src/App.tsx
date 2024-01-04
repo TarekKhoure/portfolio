@@ -33,7 +33,7 @@ function App() {
   return (
     <div className={`app ${sideBarShown ? "shown" : ""}`}>
       <MenuIcon onClick={() => setSideBarShown(!sideBarShown)} />
-      <Sidebar ref={sidebarRef} />
+      <Sidebar ref={sidebarRef} setSideBarShow={setSideBarShown} />
       <Content />
       <SpeedInsights />
     </div>

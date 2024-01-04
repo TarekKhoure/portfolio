@@ -3,6 +3,12 @@
   flex-direction: column;
   gap: 10px;
 
+  ul {
+    li {
+      width: fit-content;
+    }
+  }
+
   a {
     color: $primary;
     position: relative;
